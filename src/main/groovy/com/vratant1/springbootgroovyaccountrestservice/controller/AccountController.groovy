@@ -49,7 +49,7 @@ class AccountController {
         if(accountSaved!=null){
             new ResponseEntity<String>("Account Saved Successfully.", HttpStatus.ACCEPTED)
         }else{
-            new ResponseEntity<String>("Account could not be saved.", HttpStatus.ACCEPTED)
+            new ResponseEntity<String>("Account could not be saved.", HttpStatus.BAD_REQUEST)
         }
 
     }
