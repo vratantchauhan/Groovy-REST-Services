@@ -32,13 +32,13 @@ class AccountController {
     }
 
     @GetMapping("/{id}")
-    ResponseEntity<Account> getAllAccounts(@PathVariable int id){
+    ResponseEntity<Account> getAccountById(@PathVariable int id){
         new ResponseEntity<Account>(accountServiceImpl.findAccountByIdService(id),HttpStatus.OK)
 
     }
 
     @GetMapping("accountNumber/{accountNumber}")
-    ResponseEntity<Account> getAllAccounts(@PathVariable long accountNumber){
+    ResponseEntity<Account> getAccountByAccountNumber(@PathVariable long accountNumber){
         new ResponseEntity<Account>(accountServiceImpl.findAccountByAccountNumberService(accountNumber),HttpStatus.OK)
 
     }
